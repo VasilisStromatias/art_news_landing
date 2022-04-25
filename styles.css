@@ -5,4 +5,130 @@
   --clr-orange: #d9852c;
   --clr-white: #ffffff;
 }
+
+*,
+*::after,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.opening-wrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url(./images/Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.opening-wrapper::before {
+  content: '';
+  background-color: black;
+  opacity: 0.1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.opening-inner header {
+  width: 100%;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.opening-inner header .logo {
+  max-width: 167px;
+  display: block;
+}
+
+.opening-inner #toggler {
+  display: none;
+}
+
+.opening-content {
+  padding: 50% 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.opening-content h1 {
+  color: var(--clr-white);
+  font-family: var(--ff-libre);
+  font-size: 50px;
+  position: relative;
+}
+
+.opening-content h1::before {
+  content: '';
+  background-color: #ffffff;
+  width: 90px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+}
+
+.opening-content p {
+  color: var(--clr-white);
+  font-family: var(--ff-inter);
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-block: 32px;
+  padding-right: 40px;
+}
+
+.opening-content a {
+  text-decoration: none;
+}
+
+.opening-content a button {
+  border: 2px solid var(--clr-white);
+  border-radius: 10px;
+  min-width: 153px;
+  min-height: 42px;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: var(--ff-inter);
+  font-size: 15px;
+}
+
+.opening-content a button:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+.grid-wrapper {
+  padding-inline: 32px;
+}
+
+.grid-title {
+  padding-block: 78px;
+}
+
+.grid-title h2 {
+  font-family: 'Inter ExtraBold', sans-serif;
+  font-size: 24px;
+}
 /*# sourceMappingURL=styles.css.map */
