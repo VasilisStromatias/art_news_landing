@@ -108,6 +108,8 @@
 
 .grid-wrapper {
   padding-inline: 32px;
+  display: grid;
+  row-gap: 20px;
 }
 
 .grid-title {
@@ -115,5 +117,41 @@
   h2 {
     font-family: 'Inter ExtraBold', sans-serif;
     font-size: 24px;
+  }
+}
+
+.grid-item {
+  width: 100%;
+  .grid-image {
+    max-width: 100%;
+    display: block;
+    transform: translateY(3px);
+  }
+  .grid-contain {
+    border: 2px solid var(--clr-grey);
+    padding-inline: 32px;
+    border-radius: 5px;
+    p {
+      padding-block: 30px;
+      color: #b7b7b7;
+      font-family: var(--ff-inter);
+      font-size: 13px;
+    }
+    h3 {
+      font-family: 'Inter ExtraBold', sans-serif;
+      font-size: 18px;
+      padding-right: 10px;
+    }
+    .grid-link {
+      padding-block: 18px 32px;
+      display: flex;
+      justify-content: end;
+      a {
+        text-decoration: none;
+        color: var(--clr-orange);
+        font-family: var(--ff-inter);
+        font-weight: 700;
+      }
+    }
   }
 }
