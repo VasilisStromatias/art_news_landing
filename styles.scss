@@ -108,8 +108,6 @@
 
 .grid-wrapper {
   padding-inline: 32px;
-  display: grid;
-  row-gap: 20px;
 }
 
 .grid-title {
@@ -118,6 +116,11 @@
     font-family: 'Inter ExtraBold', sans-serif;
     font-size: 24px;
   }
+}
+
+.grid-inner {
+  display: grid;
+  row-gap: 20px;
 }
 
 .grid-item {
