@@ -41,7 +41,6 @@
 .opening-inner {
   header {
     width: 100%;
-    // height: 100px;
     padding: 30px;
     display: flex;
     flex-direction: row;
@@ -53,8 +52,18 @@
       display: block;
     }
   }
+  .menu {
+    display: none;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    position: absolute;
+  }
   #toggler {
     display: none;
+  }
+  #toggler:checked ~ .menu {
+    display: block;
   }
 }
 

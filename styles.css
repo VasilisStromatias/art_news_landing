@@ -61,8 +61,20 @@
   display: block;
 }
 
+.opening-inner .menu {
+  display: none;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+}
+
 .opening-inner #toggler {
   display: none;
+}
+
+.opening-inner #toggler:checked ~ .menu {
+  display: block;
 }
 
 .opening-content {
