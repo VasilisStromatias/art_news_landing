@@ -53,7 +53,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .opening-inner header .logo {
@@ -62,19 +62,66 @@
 }
 
 .opening-inner .menu {
-  display: none;
   width: 100%;
-  background-color: black;
-  opacity: 0.5;
   position: absolute;
+  top: 90%;
+  left: 0;
+  z-index: 2;
+  padding-block: 40px;
+}
+
+.opening-inner .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.opening-inner .menu ul li {
+  list-style: none;
+}
+
+.opening-inner .menu ul a {
+  color: black;
+  font-family: var(--ff-inter);
+  font-weight: 900;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.opening-inner .menu::before {
+  content: '';
+  background-color: var(--clr-orange);
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .opening-inner #toggler {
   display: none;
 }
 
-.opening-inner #toggler:checked ~ .menu {
+.opening-inner #toggler:checked ~ nav {
   display: block;
+}
+
+.opening-inner #toggler:not(:checked) ~ nav {
+  display: none;
 }
 
 .opening-content {
@@ -147,7 +194,11 @@
 .grid-inner {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   row-gap: 20px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 .grid-item {
@@ -155,7 +206,7 @@
 }
 
 .grid-item .grid-image {
-  max-width: 100%;
+  width: 100%;
   display: block;
   -webkit-transform: translateY(3px);
           transform: translateY(3px);
@@ -165,6 +216,7 @@
   border: 2px solid var(--clr-grey);
   padding-inline: 32px;
   border-radius: 5px;
+  min-height: 300px;
 }
 
 .grid-item .grid-contain p {
